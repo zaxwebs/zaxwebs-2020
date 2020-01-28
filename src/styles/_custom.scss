@@ -1,16 +1,21 @@
-// BASE
-html,
-body {
-	color: $white;
-	background-color: $black;
-}
 // UTILS
 @mixin bg-cover($path: false) {
 	@if $path {
 		background-image: url($path);
 	}
 	background-size: cover;
-	background-position: center center;
+}
+
+// BASE
+html,
+body {
+	color: $white;
+	background-color: $black;
+	overflow-x: hidden;
+}
+
+body {
+	min-height: 2000px; // for testing scroll
 }
 
 // COMPONENTS
@@ -18,10 +23,17 @@ body {
 	border-radius: 9999px; // rounded
 }
 // LAYOUT
+section {
+	padding: $spacer * 2 0;
+}
 
 // PAGE(s)
 #home-page {
 	#cover {
+		@include media-breakpoint-up(lg) {
+			padding: $spacer * 3 0;
+		}
+
 		.container {
 			@include media-breakpoint-up(xl) {
 				max-width: 1800px;
@@ -53,10 +65,10 @@ body {
 					border-radius: $border-radius * 3;
 					border-top-left-radius: 200px;
 				}
-				.right-content {
+				#home-intro {
 					max-width: 340px;
 					@include media-breakpoint-up(md) {
-						margin-top: 22vh;
+						margin-top: 20vh;
 					}
 
 					.circle {
