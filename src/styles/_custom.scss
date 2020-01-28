@@ -1,9 +1,88 @@
 // BASE
-
+html,
+body {
+	color: $white;
+	background-color: $black;
+}
 // UTILS
+@mixin bg-cover($path: false) {
+	@if $path {
+		background-image: url($path);
+	}
+	background-size: cover;
+	background-position: center center;
+}
 
 // COMPONENTS
-
+.btn {
+	border-radius: 9999px; // rounded
+}
 // LAYOUT
 
 // PAGE(s)
+#home-page {
+	#cover {
+		.container {
+			@include media-breakpoint-up(xl) {
+				max-width: 1800px;
+			}
+
+			.row {
+				min-height: 90vh;
+
+				h1 {
+					line-height: 1;
+					@include media-breakpoint-up(md) {
+						font-size: 80px;
+					}
+
+					@include media-breakpoint-up(lg) {
+						font-size: 100px;
+					}
+
+					@include media-breakpoint-up(xl) {
+						font-size: 140px;
+					}
+				}
+
+				.profile-pic {
+					display: inline-block;
+					width: 250px;
+					padding-top: 250px;
+					margin-bottom: $spacer;
+					border-radius: $border-radius * 3;
+					border-top-left-radius: 200px;
+				}
+				.right-content {
+					max-width: 340px;
+					@include media-breakpoint-up(md) {
+						margin-top: 22vh;
+					}
+
+					.circle {
+						width: 1rem;
+						height: 1rem;
+						border-radius: 2rem;
+						background-color: $green;
+						margin-right: 0.4rem;
+					}
+
+					h2 {
+						margin-bottom: $spacer;
+						@include media-breakpoint-up(lg) {
+							font-size: 2.5rem;
+						}
+
+						@include media-breakpoint-up(xl) {
+							font-size: 3rem;
+						}
+					}
+
+					p {
+						margin-bottom: $spacer;
+					}
+				}
+			}
+		}
+	}
+}
