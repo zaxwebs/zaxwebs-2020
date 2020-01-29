@@ -12,5 +12,5 @@ const webster = new Rellaxx('#webster', {
 })
 
 const intro = new Rellaxx('#home-intro', {
-	speed: -4
+	speed: 0
 })
