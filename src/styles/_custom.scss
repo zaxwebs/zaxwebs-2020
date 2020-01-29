@@ -61,6 +61,11 @@ section {
 // PAGE(s)
 #home-page {
 	#cover {
+		.container {
+			position: relative;
+			z-index: 2;
+		}
+		@include bg-cover('../images/laptop.jpg');
 		.row {
 			min-height: 90vh;
 
@@ -105,18 +110,28 @@ section {
 				}
 			}
 		}
-	}
 
-	.sidebar {
-		display: none;
-		position: absolute;
-		width: 50vh;
-		right: -20vh;
-		bottom: 30vh;
+		.sidebar {
+			display: none;
+			position: absolute;
+			width: 50vh;
+			right: -20vh;
+			bottom: 30vh;
+			z-index: 2;
 
-		transform: rotate(90deg);
-		@include media-breakpoint-up(md) {
-			display: block;
+			transform: rotate(90deg);
+			@include media-breakpoint-up(md) {
+				display: block;
+			}
+		}
+
+		.overlay {
+			width: 100%;
+			height: 20%;
+			bottom: 0;
+			background: linear-gradient(rgba(0, 0, 0, 0), $black, $black);
+			position: absolute;
+			z-index: 1;
 		}
 	}
 }
