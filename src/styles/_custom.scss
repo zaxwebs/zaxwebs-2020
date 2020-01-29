@@ -28,10 +28,6 @@ body {
 	overflow-x: hidden;
 }
 
-body {
-	min-height: 2000px; // for testing scroll
-}
-
 h2 {
 	margin-bottom: $spacer;
 	@include media-breakpoint-up(lg) {
