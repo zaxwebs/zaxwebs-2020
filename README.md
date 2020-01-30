@@ -1,6 +1,8 @@
 # ZaxWebs Website 2020
 My 2020 website redesign.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9804e119-8a43-4c5e-86b9-1aeaba1fdf40/deploy-status)](https://app.netlify.com/sites/zaxwebs/deploys)
+
 👷 **Note**: Currently under construction.
 
 # Commands
