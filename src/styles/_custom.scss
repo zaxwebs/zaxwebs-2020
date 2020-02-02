@@ -61,6 +61,7 @@ section {
 // PAGE(s)
 #home-page {
 	#cover {
+		padding: $spacer * 2.5 0;
 		.container {
 			position: relative;
 			z-index: 2;
@@ -117,11 +118,11 @@ section {
 			position: absolute;
 			width: 50vh;
 			right: -20vh;
-			bottom: 30vh;
+			bottom: 40vh;
 			z-index: 2;
 
 			transform: rotate(90deg);
-			@include media-breakpoint-up(md) {
+			@include media-breakpoint-up(lg) {
 				display: block;
 			}
 		}
