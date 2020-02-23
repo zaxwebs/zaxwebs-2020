@@ -1,5 +1,5 @@
 # ZaxWebs Website 2020
-My 2020 website redesign - prototype.
+My Jan/2020 website redesign - prototype.
 
 Live: https://zaxwebs.netlify.com/
 
